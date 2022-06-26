@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'user_sessions/new'
   root 'static_pages#top'
 
   get 'login', to: 'user_sessions#new'
