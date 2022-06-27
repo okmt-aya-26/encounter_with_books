@@ -7,12 +7,14 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    binding.irb
     if @user.save
-      redirect_to login_path
+      redirect_to login_path, notice: "新規登録しました"
     else
       render :new
     end
+  end
+
+  def show
   end
 
   private
