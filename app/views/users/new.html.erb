@@ -1,0 +1,14 @@
+<h1>ユーザー登録画面</h1>
+<p>ー新しくガチャを作るためにはユーザー登録が必要ですー</p>
+<%= form_with model: @user, local: true do |f| %>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %><br />
+  <%= f.label :email %><br />
+  <%= f.text_field :email %><br />
+  <%= f.label :password %><br />
+  <%= f.password_field :password %><br />
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %><br />
+  <br />
+  <%= f.submit value: '作成' %>
+<% end %>
